@@ -4,6 +4,7 @@ import {
     Container,
     Group,
     Background,
+    BackgroundLinear,
     Dropdown,
     Picture,
     Link,
@@ -22,7 +23,9 @@ import {
 export default function Header({ bg = true, children, ...restProps }) {
     return bg ? (
         <Background data-testid="header-bg" {...restProps}>
-            {children}
+            <BackgroundLinear>
+                <div>{children}</div>
+            </BackgroundLinear>
         </Background>
     ) : (
         children

@@ -3,23 +3,34 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
     display: flex;
     justify-content: center;
-    height: 100%
-    margin-top: 20px;
+    height: 100%;
+    margin-top: 0px;
     flex-wrap: wrap;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 950px) {
         flex-direction: column;
-        align-items: center:
+        align-items: center;
     }
 `;
 
 export const Input = styled.input`
-    max-width: 450px;
     width: 100%;
-    border: 0;
+    max-width: 450px;
+    border: solid 1px #8c8c8c;
+    outline: none;
+    border-radius: 2px;
     padding: 10px;
-    height: 70px;
+    color: #000;
+    height: 48px;
+    appearance: none;
     box-sizing: border-box;
+
+    @media only screen and (min-width: 951px) {
+        height: 60px;
+        min-width: 450px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
 `;
 
 export const Break = styled.div`
@@ -31,7 +42,7 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     height: 100%;
-    height: 70px;
+    height: 60px;
     background: #e50914;
     color: white;
     text-transform: uppercase;
@@ -39,14 +50,15 @@ export const Button = styled.button`
     font-size: 26px;
     border: 0;
     cursor: pointer;
+    text-align: center;
 
     img {
         margin-left: 10px;
         filter: brightness(0) invert(1);
         width: 24px;
 
-        @media (max-width: 1000px) {
-            width: 16px;
+        @media (max-width: 950px) {
+            width: 10px;
         }
     }
 
@@ -54,11 +66,13 @@ export const Button = styled.button`
         background: #f40612;
     }
 
-    @media (max-width: 1000px) {
-        height: 50px;
+    @media only screen and (max-width: 950px) {
+        padding: 0 0 0 10px;
+        width: 192.9px;
+        height: 40px;
         font-size: 16px;
         margin-top: 20px;
-        font-weith: bold;
+        font-weith: 400;
     }
 `;
 
