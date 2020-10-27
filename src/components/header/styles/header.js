@@ -3,30 +3,46 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Background = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column;
     background: url(${({ src }) =>
-            src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
+            src ? `../images/misc/${src}.jpg` : '../images/misc/home.jpg'})
         top left / cover no-repeat;
-
     @media (max-width: 1100px) {
         ${({ dontShownOnSmallViewPort }) =>
             dontShownOnSmallViewPort && `background: none;`}
     }
 `;
 
+export const BackgroundLinear = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        from(rgba(0, 0, 0, 0.8)),
+        color-stop(60%, rgba(0, 0, 0, 0)),
+        to(rgba(0, 0, 0, 0.8))
+    );
+`;
+
 export const Container = styled.div`
     display: flex;
+    max-width: 1808px;
     margin: 0 56px;
     height: 64px;
-    padding 18px 0;
+    padding: 12px 0;
     justify-content: space-between;
     align-items: center;
-    
+
     a {
         display: flex;
     }
 
-    @media ( max-width: 1000px ) {
+    @media (max-width: 1000px) {
         margin: 0 30px;
     }
 `;
@@ -92,12 +108,12 @@ export const SearchIcon = styled.button`
 
 export const ButtonLink = styled(ReachRouterLink)`
     display: block;
-    background-color: #e50914
+    background-color: #e50914;
     width: 84px;
     height: fit-content;
     color: white;
-    padding: 8px 17pxpx;
-    font-size: 15px;
+    padding: 8px 17px;
+    font-size: 16px;
     border-radius: 3px;
     border: 0;
     cursor: pointer;
@@ -110,7 +126,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Picture = styled.button`
-    background: url(${({ src }) => src})
+    background: url(${({ src }) => src});
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -202,9 +218,9 @@ export const Logo = styled.img`
     width: 108px;
     margin-right: 40px;
 
-    @media (max-width: 1449px) {
+    @media (min-width: 1000px) {
         height: 45px;
-        width: 167px;
+        width: 134px;
     }
 `;
 
