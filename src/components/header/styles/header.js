@@ -31,6 +31,7 @@ export const BackgroundLinear = styled.div`
 
 export const Container = styled.div`
     display: flex;
+    min-width: 200px;
     max-width: 1808px;
     margin: 0 56px;
     height: 64px;

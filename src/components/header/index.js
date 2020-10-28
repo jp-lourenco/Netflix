@@ -23,9 +23,7 @@ import {
 export default function Header({ bg = true, children, ...restProps }) {
     return bg ? (
         <Background data-testid="header-bg" {...restProps}>
-            <BackgroundLinear>
-                <div>{children}</div>
-            </BackgroundLinear>
+            <BackgroundLinear>{children}</BackgroundLinear>
         </Background>
     ) : (
         children
