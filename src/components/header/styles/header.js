@@ -4,6 +4,7 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 export const Background = styled.div`
     display: flex;
     align-items: center;
+    min-width: 320px;
     flex-direction: column;
     background: url(${({ src }) =>
             src ? `../images/misc/${src}.jpg` : '../images/misc/home.jpg'})
@@ -16,8 +17,10 @@ export const Background = styled.div`
 
 export const BackgroundLinear = styled.div`
     display: flex;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     background: rgba(0, 0, 0, 0.4);
     background-image: -webkit-gradient(
         linear,
@@ -31,7 +34,7 @@ export const BackgroundLinear = styled.div`
 
 export const Container = styled.div`
     display: flex;
-    min-width: 200px;
+    width: 92%;
     max-width: 1808px;
     margin: 0 56px;
     height: 64px;
