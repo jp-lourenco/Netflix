@@ -48,7 +48,7 @@ export const TextSmall = styled.p`
     margin-top: 10px;
     color: #8c8c8c;
     font-size: 13px;
-    line-weight: normal;
+    line-height: normal;
 `;
 
 export const Link = styled(ReachRouterLink)`
