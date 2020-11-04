@@ -84,7 +84,7 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
     return showFeature ? (
         <Feature
             {...restProps}
-            src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.png`}
+            src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
         >
             <Content>
                 <FeatureTitle>{itemFeature.title}</FeatureTitle>
