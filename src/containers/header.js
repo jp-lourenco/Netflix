@@ -6,13 +6,15 @@ import logo from '../logo.svg';
 export function HeaderContainer({ children }) {
     return (
         <Header>
-            <Header.Frame>
-                <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-                <Header.ButtonLink to={ROUTES.SING_IN}>
-                    Sign In
-                </Header.ButtonLink>
-            </Header.Frame>
-            {children}
+            <Header.BackgroundLinear>
+                <Header.Frame>
+                    <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
+                    <Header.ButtonLink to={ROUTES.BROWSE}>
+                        Sign In
+                    </Header.ButtonLink>
+                </Header.Frame>
+                {children}
+            </Header.BackgroundLinear>
         </Header>
     );
 }

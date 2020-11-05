@@ -3,7 +3,6 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Background = styled.div`
     display: flex;
-    align-items: center;
     min-width: 320px;
     flex-direction: column;
     background: url(${({ src }) =>
@@ -55,13 +54,13 @@ export const Link = styled.p`
     color: #fff;
     text-decoration: none;
     margin-right: 30px;
-    font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')}
+    font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
     cursor: pointer;
 
     &:hover {
         font-weight: bold;
     }
-    
+
     &last-of-type {
         margin-right: 0;
     }
@@ -105,7 +104,7 @@ export const SearchIcon = styled.button`
     border: 0;
 
     img {
-        filter: brigthness(0) invert(1);
+        filter: brightness(0) invert(1);
         width: 16px;
     }
 `;
@@ -130,7 +129,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Picture = styled.button`
-    background: url(${({ src }) => src});
+    background: url('/images/users/2.png');
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -191,27 +190,28 @@ export const Profile = styled.div`
 `;
 
 export const Feature = styled(Container)`
-    padding: 150px 0 500px 0;
+    padding: 100px 0 470px 0;
     flex-direction: column;
     align-items: normal;
-    width: 50%;
+    width: 38%;
 
-    @media (max-width: 1100px) {
-        display: none;
+    @media (max-width: 950px) {
+        min-width: 370px;
     }
 `;
 
-export const FeatureCallOut = styled.h2`
-    color: white;
-    font-size: 50px;
-    line-height: normal;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-    margin: 0;
+export const FeatureImage = styled.img`
+    min-height: 190px;
+    min-width: 477px;
+
+    @media (max-width: 1000px) {
+        width: 300px;
+        height: 120px;
+    }
 `;
 
 export const Text = styled.p`
-    font-size: 22px;
+    font-size: 21px;
     line-height: normal;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
@@ -235,15 +235,13 @@ export const PlayButton = styled.button`
     border-width: 0;
     padding: 10px 20px;
     border-radius: 5px;
-    max-width: 130px;
+    max-width: 110px;
     font-weight: bold;
-    font-size: 20px;
-    marigin-top: 10px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.5 ease;
 
     &:hover {
-        background: #ff1e1e;
-        color: white;
+        background: #c3c3c3;
     }
 `;

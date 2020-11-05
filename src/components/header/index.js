@@ -10,7 +10,7 @@ import {
     Link,
     Search,
     Profile,
-    FeatureCallOut,
+    FeatureImage,
     SearchIcon,
     SearchInput,
     ButtonLink,
@@ -23,12 +23,19 @@ import {
 export default function Header({ bg = true, children, ...restProps }) {
     return bg ? (
         <Background data-testid="header-bg" {...restProps}>
-            <BackgroundLinear>{children}</BackgroundLinear>
+            {children}
         </Background>
     ) : (
         children
     );
 }
+
+Header.BackgroundLinear = function HeaderBackgroundLinear({
+    children,
+    ...restProps
+}) {
+    return <BackgroundLinear {...restProps}>{children}</BackgroundLinear>;
+};
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
@@ -64,7 +71,7 @@ Header.Search = function HeaderSearch({
             <SearchInput
                 value={searchTerm}
                 onChange={({ target }) => setSearchTerm(target.value)}
-                placeholder="Search films ans series"
+                placeholder="Search movies and series"
                 active="searchActive"
                 data-testid="search-input"
             />
@@ -96,11 +103,14 @@ Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
     return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
-Header.FeatureCallOut = function HeaderFeatureCallOut({
-    children,
-    ...restProps
-}) {
-    return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;
+Header.FeatureImage = function HeaderFeatureImage({ ...restProps }) {
+    return (
+        <FeatureImage
+            src="/images/misc/title.png"
+            alt="The SpongeBob Movie: Sponge on the Run"
+            {...restProps}
+        />
+    );
 };
 
 Header.Text = function HeaderText({ children, ...restProps }) {
