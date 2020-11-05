@@ -17,7 +17,7 @@ export const Overlay = styled.div`
 
 export const Inner = styled.div`
     position: relative;
-    width; 100%;
+    width: 100%;
     max-width: 900px;
     margin: auto;
 
@@ -62,7 +62,7 @@ export const Close = styled.div`
     }
 `;
 
-export const Container = styled.button`
+export const Button = styled.button`
     background-color: #e50914;
     border-color: #ff0a16;
     width: 115px;

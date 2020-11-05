@@ -1,5 +1,13 @@
 import React from 'react';
-import { Container } from '../form/styles/form';
+import {
+    Container,
+    Title,
+    List,
+    Item,
+    User,
+    Picture,
+    Name,
+} from './styles/profiles';
 
 export default function Profiles({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
@@ -21,7 +29,7 @@ Profiles.User = function ProfileUser({ children, ...restProps }) {
     return <Item {...restProps}>{children}</Item>;
 };
 
-Profiles.Picture = function ProfilePicture({ children, ...restProps }) {
+Profiles.Picture = function ProfilePicture({ src, ...restProps }) {
     return (
         <Picture
             {...restProps}

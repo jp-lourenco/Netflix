@@ -76,7 +76,7 @@ Card.Image = function CardImage({ ...restProps }) {
     return <Image {...restProps} />;
 };
 
-Card.Item = function CardItem({ item, children, ...restProps }) {
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
     const { showFeature, itemFeature, setShowFeature } = useContext(
         FeatureContext,
     );

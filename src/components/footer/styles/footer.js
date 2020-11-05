@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
@@ -17,7 +16,7 @@ export const Container = styled.div`
 export const Column = styled.div`
     display: flex;
     flex-direction: column;
-    text-alig: left;
+    text-align: left;
 `;
 
 export const Row = styled.div`
