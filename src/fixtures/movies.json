@@ -1,0 +1,202 @@
+[
+    {
+        "id": 0,
+        "title": "Fast and Furious",
+        "description": "A score to settle. A psycho to catch. Time for the ex-conand the G-Man to shift their rate into high gear",
+        "genre": "adventure",
+        "maturity": "13",
+        "slug": "fast-furious"
+    },
+    {
+        "id": 1,
+        "title": "Inception",
+        "description": "In this mind-bending sci-fi thiller, a man runs an espionage business built around entering the subconscious of his target to mold their thoughts.",
+        "genre": "adventure",
+        "maturity": "13",
+        "slug": "inception"
+    },
+    {
+        "id": 2,
+        "title": "Inglorious Basterds",
+        "description": "A jewish cinema owner in occupied Paris is forced to host a Nazi premiere, whre a group of American soldierd called the Basterds plnas a face-off.",
+        "genre": "adventure",
+        "maturity": "18",
+        "slug": "inglorious-basterds"
+    },
+    {
+        "id": 3,
+        "title": "Interstellar",
+        "description": "With humanity teetering on the brink of extinction, a group of astronauts travels through a wormhole in search of another inhabitable planet.",
+        "genre": "adventure",
+        "maturity": "13",
+        "slug": "interstellar"
+    },
+    {
+        "id": 4,
+        "title": "The dark Knight",
+        "description": "As Batman, Lt. Gordon and the district attorney continue to dismatle Gotham's criminal underground, a new villain threatens to undo their good work.",
+        "genre": "adventure",
+        "maturity": "16",
+        "slug": "the-dark-knight"
+    },
+    {
+        "id": 5,
+        "title": "Despicable me",
+        "description": "Villainous Gru hatches a plan to steal the moon from the sky. But he has a tough time staying on task after three orphans land his care.",
+        "genre": "children",
+        "maturity": "7",
+        "slug": "despicable-me"
+    },
+    {
+        "id": 6,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "description": "On this 11th birthday, Harry Potter learns that he's a powerful wizard with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry.",
+        "genre": "children",
+        "maturity": "7",
+        "slug": "harry-potter"
+    },
+    {
+        "id": 7,
+        "title": "Kung Fu Panda",
+        "description": "When the Valley of Peace is threatend, lazy Po the panda discovers his destiny as the 'chosen one' and trains to become a kung fu hero.",
+        "genre": "children",
+        "maturity": "7",
+        "slug": "kung-fu-panda"
+    },
+    {
+        "id": 8,
+        "title": "Shrek the Third",
+        "description": "Life in the swamp seems better than ever for Shrek and Fiona, until King Harold suddenly falls ill and the adorable ogre must find an heir.",
+        "genre": "children",
+        "maturity": "7",
+        "slug": "shrek"
+    },
+    {
+        "id": 9,
+        "title": "Madagascar",
+        "description": "When the ship they're on capsizes, a lion, zebra, giraffe and hippo from a zoo become stranded on Madagascar, an island populated by oddballs.",
+        "genre": "children",
+        "maturity": "7",
+        "slug": "madagascar"
+    },
+    {
+        "id": 10,
+        "title": "American Pie",
+        "description": "Four longtime buddies dedicate their summer to partying and sexual conquests. It's not as simple as it sounds.",
+        "genre": "comedies",
+        "maturity": "16",
+        "slug": "american-pie"
+    },
+    {
+        "id": 11,
+        "title": "Bad Neighbours",
+        "description": "These nice young parents hope the college boys next door are quiet. Fat chance, when the frat house motto is 'party on!'",
+        "genre": "comedies",
+        "maturity": "16",
+        "slug": "bad-neighbours"
+    },
+    {
+        "id": 12,
+        "title": "The Hangover",
+        "description": "What happens in Vegas, stays in Vegas ... when you can't remember what the hell happened the night before.",
+        "genre": "comedies",
+        "maturity": "16",
+        "slug": "hangover"
+    },
+    {
+        "id": 13,
+        "title": "Jackass the movie",
+        "description": "Johnny Knoxville and his fellow pranksters wander Japan in panda outfits, wreak havoc on a golf course, perform stunts involving alligators and more.",
+        "genre": "comedies",
+        "maturity": "16",
+        "slug": "jackass"
+    },
+    {
+        "id": 14,
+        "title": "Project X",
+        "description": "Drugs, booze, sex and a lawn gnome. Some parties last for a night. This one will live on through history.",
+        "genre": "comedies",
+        "maturity": "16",
+        "slug": "project-x"
+    },
+    {
+        "id": 15,
+        "title": "Catch me if you can",
+        "description": "An FBI agent makes it his mission to put cunning con man Frank Abagnale Jr. behind bars. But Frank not only eludes capture, he revels in the pursuit.",
+        "genre": "drama",
+        "maturity": "13",
+        "slug": "catch-me-if-you-can"
+    },
+    {
+        "id": 16,
+        "title": "Django Unchained",
+        "description": "Accompanied by a German bounty hunter, a freed slave named Django travels across America to free his wife from a sadistic plantation owner.",
+        "genre": "drama",
+        "maturity": "16",
+        "slug": "django"
+    },
+    {
+        "id": 17,
+        "title": "The Social Network",
+        "description": "A software nerd hacks into a college website. The word 'friend' and millions of lives will never be the same.",
+        "genre": "drama",
+        "maturity": "13",
+        "slug": "the-social-network"
+    },
+    {
+        "id": 18,
+        "title": "Forrest Gump",
+        "description": "Forrest Gump, a friendly, simpleminded man, finds himself in the middle of nearly every major event of the 1960s and '70s.",
+        "genre": "drama",
+        "maturity": "16",
+        "slug": "forrest-gump"
+    },
+    {
+        "id": 19,
+        "title": "21",
+        "description": "A brilliant group of students become card-counting experts with the intent of swindling millions out of Las Vegas casinos by playing blackjack.",
+        "genre": "drama",
+        "maturity": "16",
+        "slug": "21"
+    },
+    {
+        "id": 20,
+        "title": "The Da Vinci Code",
+        "description": "A professor must decipher a cryptic message in the Louvre. Murder and Da Vinci's art mask centuries of deception.",
+        "genre": "suspense",
+        "maturity": "13",
+        "slug": "vinci"
+    },
+    {
+        "id": 21,
+        "title": "Gone Girl",
+        "description": "Nick Dunne discovers that the entire media focus has shifted on him when his wife Amy Dunne disappears on the day of their fifth wedding anniversary.",
+        "genre": "suspense",
+        "maturity": "16",
+        "slug": "gone-girl"
+    },
+    {
+        "id": 22,
+        "title": "Bird Box",
+        "description": "Five years after an ominous unseen presence drives most of society to suicide, a survivor and her two children make a desperate bid to reach safety.",
+        "genre": "suspense",
+        "maturity": "16",
+        "slug": "bird-box"
+    },
+    {
+        "id": 23,
+        "title": "Seven",
+        "description": "A serial killer begins murdering people according to the seven deadly sins. Two detectives, one new to the city and the other about to retire, are tasked with apprehending the criminal.",
+        "genre": "suspense",
+        "maturity": "16",
+        "slug": "seven"
+    },
+    {
+        "id": 24,
+        "title": "Zodiac",
+        "description": "Robert Graysmith, a cartoonist by profession, finds himself obsessively thinking about the Zodiac killer. He uses his puzzle-solving abilities to get closer to revealing the identity of the killer.",
+        "genre": "suspense",
+        "maturity": "16",
+        "slug": "zodiac"
+    }
+]
