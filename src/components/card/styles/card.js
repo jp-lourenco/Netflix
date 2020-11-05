@@ -80,11 +80,13 @@ export const Image = styled.img`
     max-width: 305px;
     cursor: pointer;
     height: auto;
+    border-radius: 4px;
     padding: 0;
     margin: 0;
 `;
 
 export const Item = styled.div`
+    min-width: 250px;
     display: flex;
     flex-direction: column;
     margin-right: 5px;
@@ -92,8 +94,20 @@ export const Item = styled.div`
     cursor: pointer;
     transition: transform 0.2s;
 
+    &:hover:first-of-type {
+        transform: scale(1.6);
+        transform-origin: left;
+        z-index: 99;
+    }
+
+    &:hover:last-of-type {
+        transform: scale(1.6);
+        transform-origin: right;
+        z-index: 99;
+    }
+
     &:hover {
-        transform: scale(1.3);
+        transform: scale(1.6);
         z-index: 99;
     }
 
@@ -108,12 +122,12 @@ export const Item = styled.div`
         margin-left: 56px;
 
         @media (max-width: 1000px) {
-            margin-right: 30px;
+            margin-left: 30px;
         }
     }
 
     &:last-of-type {
-        margin-left: 56px;
+        margin-right: 56px;
 
         @media (max-width: 1000px) {
             margin-right: 30px;
@@ -126,7 +140,7 @@ export const FeatureText = styled.p`
     color: white;
     font-weight: ${({ fontWeight }) =>
         fontWeight === 'bold' ? 'bold' : 'normal'};
-    margin: 0;
+    margin: 10px 0;
 
     @media (max-width: 600px) {
         line-height: 22px;
@@ -170,7 +184,7 @@ export const FeatureClose = styled.button`
     right: 20px;
     top: 20px;
     cursor: pointer;
-    background-color; transparent;
+    background-color: transparent;
     border: 0;
 
     img {
@@ -182,7 +196,7 @@ export const FeatureClose = styled.button`
 export const Content = styled.div`
     margin: 56px;
     max-width: 500px;
-    line-heght: normal;
+    line-height: normal;
 
     @media (max-width: 1000px) {
         margin: 30px;
