@@ -46,8 +46,6 @@ export const LinearGradient = styled.div`
 `;
 
 export const Container = styled.div`
-    //position: fixed;
-    //top: 0;
     display: flex;
     width: 92%;
     max-width: 1808px;
@@ -216,7 +214,7 @@ export const Profile = styled.div`
 
 export const Feature = styled(Container)`
     position: relative;
-    padding: 150px 0 500px 0;
+    padding: 110px 0 470px 0;
     flex-direction: column;
     align-items: normal;
     width: 38%;
