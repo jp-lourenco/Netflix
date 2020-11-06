@@ -6,7 +6,7 @@ export default function Loading({ src, ...restProps }) {
         <Spinner {...restProps}>
             <LockBody />
             <Picture
-                src={`/images/users/2.png`}
+                src={`/assets/images/misc/user.png`}
                 data-testid="loading-picture"
             />
         </Spinner>

@@ -6,7 +6,9 @@ export const Background = styled.div`
     min-width: 320px;
     flex-direction: column;
     background: url(${({ src }) =>
-            src ? `../images/misc/${src}.jpg` : '../images/misc/home.jpg'})
+            src
+                ? `../assets/images/misc/${src}.jpg`
+                : '../assets/images/misc/home.jpg'})
         top left / cover no-repeat;
     @media (max-width: 1100px) {
         ${({ dontShownOnSmallViewPort }) =>
@@ -31,7 +33,21 @@ export const BackgroundLinear = styled.div`
     );
 `;
 
+export const LinearGradient = styled.div`
+    background: linear-gradient(
+        77deg,
+        rgba(0, 0, 0, 0.6) 0,
+        rgba(0, 0, 0, 0) 85%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+`;
+
 export const Container = styled.div`
+    //position: fixed;
+    //top: 0;
     display: flex;
     width: 92%;
     max-width: 1808px;
@@ -72,16 +88,24 @@ export const Group = styled.div`
 `;
 
 export const SearchInput = styled.input`
-    background-color: #44444459;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: 1px solid white;
+    border-radius: 0;
+    outline: none;
     transition: width 0.5s;
     height: 30px;
     font-size: 14px;
-    margin-left: ${({ active }) => (active === 'true' ? '10px' : '0')};
-    padding: ${({ active }) => (active === 'true' ? '0 10px' : '0')};
-    opacity: ${({ active }) => (active === 'true' ? '1' : '0')};
-    width: ${({ active }) => (active === 'true' ? '200px' : '0px')};
+    margin-left: ${({ active }) => (active === true ? '5px' : '0')};
+    padding: ${({ active }) => (active === true ? '0 10px' : '0')};
+    opacity: ${({ active }) => (active === true ? '1' : '0')};
+    width: ${({ active }) => (active === true ? '200px' : '0px')};
+
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #999;
+        opacity: 1; /* Firefox */
+    }
 `;
 
 export const Search = styled.div`
@@ -102,6 +126,7 @@ export const SearchIcon = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: 0;
+    outline: none;
 
     img {
         filter: brightness(0) invert(1);
@@ -129,7 +154,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Picture = styled.button`
-    background: url('/images/users/2.png');
+    background: url('/assets/images/misc/user.png');
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -190,7 +215,8 @@ export const Profile = styled.div`
 `;
 
 export const Feature = styled(Container)`
-    padding: 100px 0 470px 0;
+    position: relative;
+    padding: 150px 0 500px 0;
     flex-direction: column;
     align-items: normal;
     width: 38%;

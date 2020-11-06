@@ -5,6 +5,7 @@ import {
     Group,
     Background,
     BackgroundLinear,
+    LinearGradient,
     Dropdown,
     Picture,
     Link,
@@ -37,6 +38,13 @@ Header.BackgroundLinear = function HeaderBackgroundLinear({
     return <BackgroundLinear {...restProps}>{children}</BackgroundLinear>;
 };
 
+Header.LinearGradient = function HeaderLinearGradient({
+    children,
+    ...restProps
+}) {
+    return <LinearGradient {...restProps}>{children}</LinearGradient>;
+};
+
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>;
 };
@@ -66,13 +74,13 @@ Header.Search = function HeaderSearch({
                 onClick={() => setSearchActive((searchActive) => !searchActive)}
                 data-testid="search-click"
             >
-                <img src="/images/icons/search.png" alt="Search" />
+                <img src="/assets/images/icons/search.png" alt="Search" />
             </SearchIcon>
             <SearchInput
                 value={searchTerm}
                 onChange={({ target }) => setSearchTerm(target.value)}
-                placeholder="Search movies and series"
-                active="searchActive"
+                placeholder="Title, peoples, genres"
+                active={searchActive}
                 data-testid="search-input"
             />
         </Search>
@@ -87,8 +95,8 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
     return <Feature {...restProps}>{children}</Feature>;
 };
 
-Header.Picture = function HeaderPicture({ src, ...restProps }) {
-    return <Picture {...restProps} src={`/images/users/${src}.png`} />;
+Header.Picture = function HeaderPicture({ ...restProps }) {
+    return <Picture {...restProps} src={'/assets/images/misc/user.png'} />;
 };
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
@@ -106,7 +114,7 @@ Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
 Header.FeatureImage = function HeaderFeatureImage({ ...restProps }) {
     return (
         <FeatureImage
-            src="/images/misc/title.png"
+            src="assets/images/misc/title.png"
             alt="The SpongeBob Movie: Sponge on the Run"
             {...restProps}
         />
