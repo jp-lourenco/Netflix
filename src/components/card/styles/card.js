@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const Title = styled.h1`
-    font-size: 24px;
+    font-size: 20px;
     color: #e5e5e5;
     font-weight: bold;
     margin-left: 56px;
@@ -94,20 +94,8 @@ export const Item = styled.div`
     cursor: pointer;
     transition: transform 0.2s;
 
-    &:hover:first-of-type {
-        transform: scale(1.6);
-        transform-origin: left;
-        z-index: 99;
-    }
-
-    &:hover:last-of-type {
-        transform: scale(1.6);
-        transform-origin: right;
-        z-index: 99;
-    }
-
     &:hover {
-        transform: scale(1.6);
+        transform: scale(1.7);
         z-index: 99;
     }
 
@@ -120,6 +108,7 @@ export const Item = styled.div`
 
     &:first-of-type {
         margin-left: 56px;
+        transform-origin: left;
 
         @media (max-width: 1000px) {
             margin-left: 30px;
@@ -128,6 +117,7 @@ export const Item = styled.div`
 
     &:last-of-type {
         margin-right: 56px;
+        transform-origin: right;
 
         @media (max-width: 1000px) {
             margin-right: 30px;
@@ -141,36 +131,31 @@ export const FeatureText = styled.p`
     font-weight: ${({ fontWeight }) =>
         fontWeight === 'bold' ? 'bold' : 'normal'};
     margin: 10px 0;
-
-    @media (max-width: 600px) {
-        line-height: 22px;
-    }
 `;
 
 export const Feature = styled.div`
-    display: flex;
-    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    width: 650px;
+    height: 565px;
+    margin: 40px auto;
     background: url(${({ src }) => src});
-    background-size: contain;
-    position: relative;
-    height: 360px;
-    background-position-x: right;
+    background-size: 650px 370px;
     background-repeat: no-repeat;
     background-color: black;
 
-    @media (max-width: 1000px) {
-        height: auto;
-        background-size: auto;
+    ${Title} {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
 
-        ${Title} {
-            font-size: 20px;
-            line-height: 20px;
-            margin-bottom: 10px;
-        }
-
-        ${FeatureText} {
-            font-size: 14px;
-        }
+    ${FeatureText} {
+        font-size: 14px;
     }
 `;
 
@@ -194,18 +179,14 @@ export const FeatureClose = styled.button`
 `;
 
 export const Content = styled.div`
-    margin: 56px;
-    max-width: 500px;
+    margin: 7%;
+    margin-top: 60%;
     line-height: normal;
-
-    @media (max-width: 1000px) {
-        margin: 30px;
-        max-width: none;
-    }
 `;
 
 export const Maturity = styled.div`
-    background-color: ${({ rating }) => (rating >= 15 ? 'red' : 'green')};
+    background-color: ${({ rating }) =>
+        rating >= 16 ? '#444' : rating >= 13 ? 'red' : 'green'};
     border-radius: 15px;
     width: 20px;
     padding: 5px;
@@ -215,4 +196,17 @@ export const Maturity = styled.div`
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-right: 10px;
     font-size: 12px;
+`;
+
+export const Overlay = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    background: rgba(0, 0, 0, 0.5);
 `;
