@@ -2,7 +2,7 @@
 
 Netlifx Clone with React and styled-components.
 
-![Test Image 1](https://github.com/jp-lourenco/Netflix/tree/master/netflix.png)
+![Test Image 1](jp-lourenco/Netflix/blob/master/netflix.png)
 
 ## License
 
