@@ -11,6 +11,7 @@ export const Overlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2001;
     background: rgba(0, 0, 0, 0.5);
     margin: 0 20px;
 `;
@@ -50,7 +51,7 @@ export const Close = styled.div`
         content: ' ';
         height: 22px;
         width: 2px;
-        background-color: #333;
+        background-color: #fff;
     }
 
     &:before {

@@ -1,29 +1,23 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { Card, Header, Loading, Player } from '../components';
-import * as ROUTES from '../constants/routes';
-import logo from '../logo.svg';
-import { FooterContainer } from './footer';
 
 export function BrowseContainer({ slides }) {
-    const [category, setCategory] = useState('series');
-    const [profile, setProfile] = useState({});
+    const [category, setCategory] = useState('movies');
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
-    const [slidesRows, setSlideRows] = useState([]);
-
-    const user = {};
+    const [slideRows, setSlideRows] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
         }, 3000);
-    }, [profile.displayName]);
+    }, []);
 
     useEffect(() => {
         const fuse = new Fuse(slideRows, {
-            keys: ['data.description', 'data.title', 'data.genre'],
+            keys: ['data.genre'],
         });
         const results = fuse.search(searchTerm).map(({ item }) => item);
 
@@ -38,69 +32,59 @@ export function BrowseContainer({ slides }) {
         }
     }, [searchTerm]);
 
-    return profile.displayName ? (
+    return (
         <>
-            {loading ? (
-                <Loading src={user.photoURL} />
-            ) : (
-                <Loading.ReleaseBody />
-            )}
-            <Header src="joker1" dontShowOnSmallViewPort>
-                <Header.Frame>
-                    <Header.Group>
-                        <Header.Logo
-                            to={ROUTES.HOME}
-                            src={logo}
-                            alt={Netflix}
-                        />
-                        <Header.TextLink
-                            active={category === 'series' ? 'true' : 'false'}
-                            onClick={() => setCategory('series')}
-                        >
-                            Series
-                        </Header.TextLink>
-                        <Header.TextLink
-                            active={category === 'films' ? 'true' : 'false'}
-                            onClick={() => setCategory('films')}
-                        >
-                            Films
-                        </Header.TextLink>
-                    </Header.Group>
-                    <Header.Group>
-                        <Header.Search
-                            searchTerm={searchTerm}
-                            setSearchTerm={setSearchTerm}
-                        />
-                        <Header.Profile>
-                            <Header.Picture src={user.photoURL} />
-                            <Header.Dropdown>
-                                <Header.Group>
-                                    <Header.Picture src={user.photoURL} />
-                                    <Header.TextLink>
-                                        {user.displayName}
-                                    </Header.TextLink>
-                                </Header.Group>
-                                <Header.Group>
-                                    <Header.TextLink>Sign Out</Header.TextLink>
-                                </Header.Group>
-                            </Header.Dropdown>
-                        </Header.Profile>
-                    </Header.Group>
-                </Header.Frame>
+            {loading ? <Loading /> : <Loading.ReleaseBody />}
+            <Header src="bob.jpg" min="1340">
+                <Header.LinearGradient>
+                    <Header.Frame>
+                        <Header.Group>
+                            <Header.Logo
+                                to={'/'}
+                                src={'assets/logo.svg'}
+                                alt="Netflix"
+                            />
+                            <Header.TextLink
+                                active={
+                                    category === 'movies' ? 'true' : 'false'
+                                }
+                                onClick={() => setCategory('movies')}
+                            >
+                                Movies
+                            </Header.TextLink>
+                        </Header.Group>
+                        <Header.Group>
+                            <Header.Search
+                                searchTerm={searchTerm}
+                                setSearchTerm={setSearchTerm}
+                            />
+                            <Header.Profile>
+                                <Header.Picture />
+                                <Header.Dropdown>
+                                    <Header.Group>
+                                        <Header.Picture />
+                                        <Header.TextLink>Jp</Header.TextLink>
+                                    </Header.Group>
+                                    <Header.Group>
+                                        <Header.TextLink>
+                                            Sign Out
+                                        </Header.TextLink>
+                                    </Header.Group>
+                                </Header.Dropdown>
+                            </Header.Profile>
+                        </Header.Group>
+                    </Header.Frame>
 
-                <Header.Feature>
-                    <Header.FeatureCallOut>
-                        Watch Joker now
-                    </Header.FeatureCallOut>
-                    <Header.Text>
-                        Forever alone in a crowd, failed comedian Arthur Fleck
-                        seeks connection as he walks the streets of Gotham City.
-                        Arthur wears two masks -- the one he paints for his day
-                        job as a clown, and the guise he projects in a futile
-                        attempt to fell like he1s part of the world around him.
-                    </Header.Text>
-                    <Header.PlayButton>Play</Header.PlayButton>
-                </Header.Feature>
+                    <Header.Feature>
+                        <Header.FeatureImage />
+                        <Header.Text>
+                            With a bond that goes way back, no one separates
+                            this sponge from his snail — not even the king of
+                            the seas!
+                        </Header.Text>
+                        <Header.PlayButton>Play</Header.PlayButton>
+                    </Header.Feature>
+                </Header.LinearGradient>
             </Header>
 
             <Card.Group>
@@ -111,7 +95,7 @@ export function BrowseContainer({ slides }) {
                             {slideItem.data.map((item) => (
                                 <Card.Item key={item.docId} item={item}>
                                     <Card.Image
-                                        src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+                                        src={`/assets/images/${category}/${item.genre}/${item.slug}/small.jpg`}
                                     />
                                     <Card.Meta>
                                         <Card.SubTitle>
@@ -124,16 +108,15 @@ export function BrowseContainer({ slides }) {
                                 </Card.Item>
                             ))}
                         </Card.Entities>
-                        <Card.Feature category={category}>
-                            <Player>
-                                <Player.Button />
-                                <Player.Video src="videos/bunny.mp4" />
-                            </Player>
-                        </Card.Feature>
                     </Card>
                 ))}
+                <Card.Feature category={category}>
+                    <Player>
+                        <Player.Button />
+                        <Player.Video src="assets/videos/reliquia.mp4" />
+                    </Player>
+                </Card.Feature>
             </Card.Group>
-            <FooterContainer />
         </>
-    ) : null;
+    );
 }

@@ -3,11 +3,11 @@ import { Link as ReachRouterLink } from 'react-router-dom';
 
 export const Background = styled.div`
     display: flex;
-    min-width: 320px;
+    min-width: ${({ min }) => (min ? min : 320)}px;
     flex-direction: column;
     background: url(${({ src }) =>
             src
-                ? `../assets/images/misc/${src}.jpg`
+                ? `../assets/images/misc/${src}`
                 : '../assets/images/misc/home.jpg'})
         top left / cover no-repeat;
     @media (max-width: 1100px) {
@@ -113,10 +113,6 @@ export const Search = styled.div`
     svg {
         color: white;
         cursor: pointer;
-    }
-
-    @media (max-width: 700px) {
-        display: none;
     }
 `;
 
